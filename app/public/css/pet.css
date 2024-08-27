@@ -257,3 +257,101 @@ button:hover {
   text-align: center;
 
 }
+
+/* Existing CSS */
+
+/* New Section Styles */
+.how-it-works {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.title-container {
+  position: absolute;
+  top: -40px; /* Adjust to position the square above the section */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3D73FF;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.title-container h2 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.steps-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+}
+
+.step {
+  background-color: #FFA500;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  background: url('../imagens/arrow.png') no-repeat center center;
+  background-size: contain;
+}
+
+.arrow.left {
+  transform: rotate(90deg);
+  margin-right: 10px;
+}
+
+.arrow.right {
+  transform: rotate(-90deg);
+  margin-left: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #3D73FF;
+  padding: 20px;
+  position: relative; 
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-image {
+  height: 100px;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.container {
+  flex: 1;
+}
