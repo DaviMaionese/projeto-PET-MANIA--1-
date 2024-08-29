@@ -13,6 +13,7 @@ body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  background-color: #fff;
 }
 .container {
   max-width: 1000px;
@@ -70,8 +71,8 @@ body {
   background-color: var(--navbar-bg-contrast);
 }
 .navbar-logo {
-  width: 50px; /* Ajuste o tamanho conforme necessário */
-  height: 50px; /* Ajuste o tamanho conforme necessário */
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: 150px; /* Ajuste o tamanho conforme necessário */
   background-image: url('../imagens/logo1.png'); /* Caminho para a imagem */
   background-size: contain; /* Ajusta a imagem ao tamanho da div */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
@@ -356,4 +357,97 @@ button:hover {
 
 .container {
   flex: 1;
+}
+
+/* Estilos existentes permanecem aqui */
+
+/* Novos estilos para a seção 'Como é fácil' */
+.how-it-works {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.title-container {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3D73FF;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.title-container h2 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.steps-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.step {
+  background-color: #FFA500;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  background: url('../imagens/arrow.png') no-repeat center center;
+  background-size: contain;
+}
+
+.arrow.left {
+  transform: rotate(90deg);
+  margin-right: 10px;
+}
+
+.arrow.right {
+  transform: rotate(-90deg);
+  margin-left: 10px;
+}
+
+/* Estilos para o rodapé */
+.footer {
+  background-color: #3D73FF;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-image {
+  height: 100px;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-icons img {
+  width: 40px;
+  height: 40px;
 }
