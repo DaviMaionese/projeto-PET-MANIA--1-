@@ -70,13 +70,15 @@ body {
   background-color: var(--navbar-bg-contrast);
 }
 .navbar-logo {
-  background-color: var(--navbar-text-color-focus);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin-right: 0.5em;
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  background-image: url('../imagens/logo1.png'); /* Caminho para a imagem */
+  background-size: contain; /* Ajusta a imagem ao tamanho da div */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-position: center; /* Centraliza a imagem dentro da div */
+  border-radius: 50%; /* Deixe a div circular, se desejar */
 }
-#navbar-toggle {
+e {
   cursor: pointer;
   border: none;
   background-color: transparent;
