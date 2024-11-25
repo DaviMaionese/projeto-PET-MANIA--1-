@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .account-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic-wrapper {
+    position: relative;
+  }
+  
+  #profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .upload-label {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  #edit-name-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .info-section h3 {
+    border-bottom: 2px solid #FF9900;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  
+  form label {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: block;
+    color: #555;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .save-btn {
+    background-color: #FF9900;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    color: #000000;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    z-index: 10;
+  }
+  
+  .back-button:hover {
+    color: #000000;
+  }
+  

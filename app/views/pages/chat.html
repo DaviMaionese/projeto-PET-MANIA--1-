@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat com Adestrador</title>
+    <style>
+ 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+ 
+        /* Barra de Menu */
+        .navbar {
+            background-color: #FFA500; /* Laranja */
+            padding: 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+ 
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+        }
+ 
+        /* Botão Voltar (em forma de "X") */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 50px; /* Tamanho aumentado */
+            color: #030200; /* Laranja */
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+ 
+        .back-btn:hover {
+            color: #000000; /* Azul */
+        }
+ 
+        /* Container do Chat */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 70px;
+        }
+ 
+        .chat-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+ 
+        /* Aumentando o tamanho da área do chat */
+        .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: calc(100vh - 200px); /* Aumentando o tamanho do chat */
+            font-size: 18px;
+        }
+ 
+        .chat-message {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+ 
+        .chat-input-container {
+            display: flex;
+            margin-top: 10px;
+        }
+ 
+        .chat-input-container input {
+            flex: 1;
+            padding: 18px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+ 
+        .chat-input-container button {
+            padding: 18px 30px;
+            background-color: #007bff; /* Azul */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+ 
+        .chat-input-container button:hover {
+            background-color: #0056b3; /* Azul mais escuro */
+        }
+    </style>
+</head>
+<body>
+ 
+    <!-- Barra de Menu -->
+    <div class="navbar">
+        <a href="index.html"><br><br></a>
+    </div>
+ 
+    <!-- Botão Voltar (X) -->
+    <a href="index.html" class="back-btn">X</a>
+ 
+    <!-- Container do Chat -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Conversa com <span id="trainerName"></span></h2>
+        </div>
+ 
+        <!-- Janela de Mensagens -->
+        <div id="chatMessages" class="chat-box"></div>
+ 
+        <!-- Input de Mensagens -->
+        <div class="chat-input-container">
+            <input type="text" id="chatInput" placeholder="Digite uma mensagem..." onkeydown="sendMessage(event)">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+ 
+    <script>
+        // Obtém o nome do adestrador a partir da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const trainer = urlParams.get('trainer');
+        document.getElementById('trainerName').textContent = trainer;
+ 
+        // Função para exibir a mensagem no chat
+        function appendMessage(sender, message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message');
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+ 
+        // Função de Envio de Mensagens
+        function sendMessage(event) {
+            if (event && event.key !== 'Enter') return;
+ 
+            const messageInput = document.getElementById('chatInput');
+            const message = messageInput.value.trim();
+ 
+            if (message) {
+                appendMessage('Você', message);
+                messageInput.value = '';
+ 
+                // Resposta do adestrador
+                setTimeout(() => {
+                    const response = `Resposta de ${trainer}: Olá como posso ajudar?`;
+                    appendMessage(trainer, response);
+                }, 1000);
+            }
+        }
+ 
+        // Inicia o chat com uma saudação
+        appendMessage('Adestrador', `Olá, você está conversando com o adestrador ${trainer}. Como posso ajudar seu pet?`);
+    </script>
+ 
+</body>
+</html>

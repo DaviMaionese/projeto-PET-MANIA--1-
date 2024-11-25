@@ -1,0 +1,89 @@
+/* Container Principal do Carrossel */
+.carousel-unique-container {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+  }
+  
+  /* Wrapper do Carrossel */
+  .carousel-unique-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Container com todos os itens do carrossel */
+  .carousel-unique-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+    justify-items: center; /* Alinha os itens ao centro da célula */
+  }
+  
+  /* Estilos para cada item do carrossel */
+  .carousel-unique-item {
+    background-color: white;
+    border: 2px solid #f2b10e;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 15px;
+    max-width: 300px; /* Limita a largura máxima do card */
+    margin: 10px auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-unique-item:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card no hover */
+  }
+  
+  /* Estilo para a imagem */
+  .carousel-unique-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px; /* Bordas arredondadas na imagem */
+    border-bottom: 2px solid #f2b10e;
+  }
+  
+  /* Títulos e textos */
+  .carousel-unique-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .carousel-unique-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-unique-item .stars {
+    font-size: 1.2em;
+    color: #f2b10e;
+    margin-top: 10px;
+  }
+  
+  /* Responsividade - Ajustes para telas menores */
+  @media (max-width: 768px) {
+    .carousel-unique-content {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-unique-content {
+      grid-template-columns: 1fr; /* 1 coluna para telas muito pequenas */
+    }
+  
+    .carousel-unique-item {
+      max-width: 100%; /* Permite que o card ocupe toda a largura disponível */
+    }
+  }
+  

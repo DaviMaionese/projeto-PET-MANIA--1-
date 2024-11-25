@@ -1,0 +1,68 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Menu Hambúrguer */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px; /* Largura do botão */
+  height: 25px; /* Altura do botão */
+  cursor: pointer; /* Mostra o cursor pointer */
+}
+
+.menu-icon .bar {
+  width: 100%; /* Largura total da barra */
+  height: 4px; /* Altura da barra */
+  background-color: #333; /* Cor da barra */
+  border-radius: 2px; /* Deixa as barras com bordas arredondadas */
+  transition: all 0.3s ease; /* Suaviza as animações */
+}
+
+/* Animação para o menu aberto */
+.menu-icon.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0; /* Esconde a barra do meio */
+}
+
+.menu-icon.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Menu lateral (sidebar) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Começa fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: #ff9900; /* Cor de fundo */
+  color: white;
+  padding: 20px;
+  transition: all 0.3s ease; /* Suaviza a abertura do menu */
+  z-index: 1000; /* Prioridade acima de outros elementos */
+}
+
+.sidebar.open {
+  left: 0; /* Quando aberto, entra na tela */
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #000; /* Muda a cor no hover */
+}

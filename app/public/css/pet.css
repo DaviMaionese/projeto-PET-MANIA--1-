@@ -4,45 +4,55 @@
   --navbar-text-color-focus: white;
   --navbar-bg-contrast: #3D73FF;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  background-color: #f8f8f8;
+  padding: 0; /* Remove o padding do body */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 .container {
-  max-width: 1000px;
+  width: 100%; /* Altere para ocupar toda a largura */
   padding-left: 1.4rem;
   padding-right: 1.4rem;
   margin-left: auto;
   margin-right: auto;
+  flex: 1; /* Faz com que o container ocupe o restante da altura */
 }
+
 #navbar {
   --navbar-height: 70px;
   position: fixed;
-  height: var(--navbar-height);
-  background-color: var(--navbar-bg-color);
+  top: 0;
   left: 0;
   right: 0;
+  height: var(--navbar-height);
+  background-color: var(--navbar-bg-color);
   box-shadow: 0 2px 4px #3D73FF;
-  position: static; /* ou use position: relative; */
-    width: 100%; /* Garante que a navbar ocupe toda a largura */
-    top: 0; /* Garante que a navbar esteja alinhada ao topo da página */
-    z-index: 1000; /* Garante que a navbar esteja acima de outros elementos, se necessário */
+  z-index: 1000; /* Garante que a navbar fique acima de outros conteúdos */
+  width: 100%; /* Garante que a navbar ocupe toda a largura */
 }
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
 }
+
 .navbar-item {
   margin: 0.4em;
-  width: 100%;
 }
 
 .home-link,
@@ -69,6 +79,7 @@ body {
   color: var(--navbar-text-color-focus);
   background-color: var(--navbar-bg-contrast);
 }
+
 .navbar-logo {
   background-color: var(--navbar-text-color-focus);
   border-radius: 50%;
@@ -76,6 +87,7 @@ body {
   height: 30px;
   margin-right: 0.5em;
 }
+
 #navbar-toggle {
   cursor: pointer;
   border: none;
@@ -87,6 +99,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
 .icon-bar {
   display: block;
   width: 25px;
@@ -94,23 +107,25 @@ body {
   margin: 2px;
   background-color: var(--navbar-text-color);
 }
-#navbar-toggle:is(:focus, :hover) .icon-bar {
-  background-color: var(--navbar-text-color-focus);
-}
+
 #navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
   position: absolute;
   margin: 0;
   width: 30px;
 }
+
 #navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
   transform: rotate(45deg);
 }
+
 #navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
   opacity: 0;
 }
+
 #navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
   transform: rotate(-45deg);
 }
+
 #navbar-menu {
   position: fixed;
   top: var(--navbar-height);
@@ -120,11 +135,11 @@ body {
   left: 0;
   right: 0;
 }
-#navbar-toggle[aria-expanded="true"] + #navbar-menu {
-  background-color: rgba(18, 33, 56, 0.4)0.4 ;
-  opacity: 1 ;
-  visibility:visible ;
 
+#navbar-toggle[aria-expanded="true"] + #navbar-menu {
+  background-color: rgba(18, 33, 56, 0.4);
+  opacity: 1;
+  visibility: visible;
 }
 
 .navbar-links {
@@ -144,6 +159,7 @@ body {
 #navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
   padding: 1em;
 }
+
 @media screen and (min-width: 700px) {
   #navbar-toggle,
   #navbar-toggle[aria-expanded="true"] {
@@ -171,22 +187,7 @@ body {
   }
 }
 
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  padding: 20px;
-
-}
-
-h2 {
-  text-align: left;
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
-  margin-top: 80px;
-}
-
+/* Corrigir a altura e os estilos gerais */
 .card-container {
   display: flex;
   justify-content: space-around;
@@ -229,31 +230,133 @@ h2 {
   font-size: 16px;
 }
 
-
-.img-custom-size {
-  width: 1817px;   /* Define a largura da imagem */
-  height: 850px;  /* Define a altura da imagem */
-  object-fit: cover; /* Mantém a imagem ajustada ao container */
-
-
+.button-container {
+  text-align: center;
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #007bff; /* Cor laranja */
+  color: white;
+  padding: 15px 30px; /* Tamanho do botão */
   border: none;
-  border-radius: 5px;
+  border-radius: 50px; /* Borda arredondada */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  font-weight: bold;
   cursor: pointer;
-  font-size: 16px;
+  transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
 }
 
-/* Alterando o estilo do botão quando hover */
 button:hover {
-  background-color: #0056b3;
+  background-color: #007bff; /* Cor de fundo mais escura no hover */
+  transform: translateY(-5px); /* Levanta o botão para cima */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
 }
 
-.button-container {
-  text-align: center;
+button:focus {
+  outline: none; /* Remove o contorno padrão ao clicar */
+  box-shadow: 0 0 0 4px rgba(255, 153, 0, 0.5); /* Sombra de foco */
+}
 
+button:active {
+  transform: translateY(2px); /* Efeito de clique (empurrando o botão para baixo) */
+}
+
+
+#new-section {
+  margin-top: 40px;
+}
+
+#new-section .blue-background {
+  background-color: #0066cc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#new-section .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+#new-section .button {
+  text-align: center;
+}
+
+#new-section .button img {
+  width: 100px;
+  height: auto;
+}
+
+#new-section .button a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffa500;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Estilizando a linha "Como é fácil" */
+.easy-line {
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Rodapé */
+.new-footer {
+  background-color: #0066cc;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.new-footer .footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.new-footer .footer-image {
+  height: 150px;
+}
+
+.new-footer .social-icons a img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+.new-footer .social-icons a {
+  text-decoration: none;
+}
+
+.navbar-link {
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
+.navbar-image {
+  height: 200px;
+  margin-right: 10px;
+  display: block;
+}
+
+.navbar-logo {
+  display: none;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }

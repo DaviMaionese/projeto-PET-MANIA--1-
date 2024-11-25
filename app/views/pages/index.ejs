@@ -4,81 +4,350 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="..\css\pet.css">
+    <link rel="stylesheet" href="../css/pet.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/carrossel.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/car.css">
+    <link rel="stylesheet" href="../css/pesquisa.css">
+    
     <title>Pet Mania</title>
 
 </head>
 <body>
-  <header id="navbar">
-    <nav class="navbar-container container">
-      <a href="..\html\index.html" class="home-link">
-        <div class="navbar-logo"></div>
-        Website Name
-      </a>
-      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div id="navbar-menu" aria-labelledby="navbar-toggle">
-        <ul class="navbar-links">
-          <li class="navbar-item"><a class="navbar-link" href="login">Login</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/chat">Chat</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/adestradores">Adestradores</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+    <!-- Ícone do Menu Hambúrguer -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#configuracoes">Configurações</a></li>
+            <li><a href="#minha-conta">Minha Conta</a></li>
+            <li><a href="#historico">Histórico</a></li>
+            <li><a href="#meu-pet">Meu Pet</a></li>
         </ul>
-      </div>
-    </nav>
-  </header>
+    </div>
+
+    <!-- Navbar existente -->
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="index2.html">
+                <img src="../imagens/logo1.png" alt="Logo" class="navbar-image">
+                <div class="navbar-logo"></div>
+            </a>
+
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a href="/index2">Login</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/chat">Chat</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/adestradores">Adestradores</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo existente -->
+    <img src="../imagens/pet.png" alt="Alex" class="img-custom-size">
 
 
 
-  <img src="../imagens/pet.png" alt="Alex" class="img-custom-size">
+    <section class="carrossel-container">
+        <h2>Recomendados</h2>
+        <div class="carrossel-wrapper">
+            <div class="carrossel">
+                <div class="carrossel-item">
+                    <div class="card">
+                        <img src="../imagens/alex.png.jpeg" alt="Alex">
+                        <h3>Alex</h3>
+                        <p>Jd. Paulista - Barueri</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
 
+                <div class="carrossel-item">
+                    <div class="card">
+                        <img src="../imagens/renata.jpg" alt="Renata">
+                        <h3>Renata</h3>
+                        <p>Av. Paulista - São Paulo</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
 
-
-  
-  <h2>Recomendados</h2>
-    <div class="card-container">
-        <div class="card">
-            <img src="../imagens/alex.png.jpeg" alt="Alex">
-            <h3>Alex</h3>
-            <p>Jd. Paulista - Barueri</p>
-            <div class="stars">★★★★★</div>
+                <div class="carrossel-item">
+                    <div class="card">
+                        <img src="../imagens/adestrador03.jpg" alt="Adriana">
+                        <h3>Adriana</h3>
+                        <p>Jd. Florida - São Roque</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </div><br><br>
+        <div class="button-container">
+            <a href="#adestradores-disponiveis" class="button-link">Ver Mais Adestradores</a>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/80" alt="Luis">
-            <h3>Luis</h3>
-            <p>Jd. Belval - Barueri</p>
-            <div class="stars">★★★★☆</div>
+        
+          
+    </section><br><br>
+    
+    
+    </div><br><br>
+
+    <div class="btn-container">
+        <h2>Como é fácil</h2>
+        <div class="steps">Faça seu cadastro de forma rápida</div><br>
+        <div class="steps">Procure o adestrador mais perto de você</div><br>
+        <div class="steps">Agende o adestramento do seu animalzinho</div><br>
+    </div>
+    
+    <!-- Formulário de Login -->
+  <div class="login-caixa">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Digite seu email" required>
+      
+      <label for="password">Senha:</label>
+      <input type="password" id="password" placeholder="Digite sua senha" required>
+      
+      <button type="submit" class="login-btn">Entrar</button>
+    </form>
+
+    <!-- Link para Registro -->
+    <p class="register-link" onclick="goToRegister()">Não possuo conta</p><br><br>
+  </div>
+<br><br>
+  <section class="search-container">
+    <h2>Encontre Adestradores na Sua Região</h2>
+    <form id="search-form">
+        <input type="text" id="search-city" placeholder="Digite a cidade" required>
+        <input type="text" id="search-state" placeholder="Digite o estado" required>
+        <button type="submit">Pesquisar</button>
+    </form>
+    <p id="search-error" style="color: red; display: none;">Nenhum adestrador encontrado para essa localização.</p>
+</section>
+  <!-- Lista de Adestradores -->
+  <section class="carousel-unique-container">
+    <section id="adestradores-disponiveis" class="carousel-unique-container">
+        <h2>Adestradores Disponíveis</h2>
+        <div class="carousel-unique-wrapper">
+            <div class="carousel-unique-content">
+                <!-- Conteúdo dos Adestradores -->
+            </div>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/80" alt="Adriana">
-            <h3>Adriana</h3>
-            <p>Jd. Florida - São Roque</p>
-            <div class="stars">★★★★★</div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/80" alt="Renata">
-            <h3>Renata</h3>
-            <p>Jd. Elzinha - Carapicuíba</p>
-            <div class="stars">★★★★★</div>
+    </section>
+    
+    <div class="carousel-unique-wrapper">
+        <div class="carousel-unique-content">
+            <!-- Adestrador 1 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/carlos.jpg" alt="Carlos">
+                    <h3>Carlos</h3>
+                    <p>Centro - Osasco</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <!-- Adestrador 2 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/amanda.jpg" alt="Amanda">
+                    <h3>Amanda</h3>
+                    <p>Vila Madalena - São Paulo</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <!-- Adestrador 3 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/rafael.jpg" alt="Rafael">
+                    <h3>Rafael</h3>
+                    <p>Centro - Cotia</p>
+                    <div class="stars">★★★★☆</div>
+                </div>
+            </div>
+            <!-- Adestrador 4 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/juliana.jpg" alt="Juliana">
+                    <h3>Juliana</h3>
+                    <p>Jardins - São Paulo</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <!-- Adestrador 5 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/marcelo.jpg" alt="Marcelo">
+                    <h3>Marcelo</h3>
+                    <p>Alphaville - Barueri</p>
+                    <div class="stars">★★★★☆</div>
+                </div>
+            </div>
+            <!-- Adestrador 6 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/carla.jpg" alt="Carla">
+                    <h3>Carla</h3>
+                    <p>Centro - Jandira</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <!-- Adestrador 7 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/bruno.jpg" alt="Bruno">
+                    <h3>Bruno</h3>
+                    <p>Moema - São Paulo</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <!-- Adestrador 8 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/fernanda.jpg" alt="Fernanda">
+                    <h3>Fernanda</h3>
+                    <p>Pinheiros - São Paulo</p>
+                    <div class="stars">★★★★☆</div>
+                </div>
+            </div>
+            <!-- Adestrador 9 -->
+            <div class="carousel-unique-item">
+                <div class="card">
+                    <img src="../imagens/rodrigo.jpg" alt="Rodrigo">
+                    <h3>Rodrigo</h3>
+                    <p>Centro - Itapevi</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 
-    <div class="button-container">
-<button type="button">Clique Aqui</button>
+  </section>
 
+
+
+  <div class="new-footer">
+    <div class="footer-content">
+        <!-- Informações de Contato -->
+        <div class="contact-info">
+            <p class="phone">📞 +55 (11) 99999-9999</p>
+            <p class="email">✉️ contato@empresa.com</p>
+        </div>
+
+        <!-- Ícones das Redes Sociais -->
+        <div class="social-footer">
+            <div class="social-icon facebook">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+            </div>
+            <div class="social-icon twitter">
+                <a href="https://twitter.com" target="_blank">
+                    <img src="twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+            <div class="social-icon linkedin">
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="social-icon instagram">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
-
-
-
-
-  <script src="..\JS\index.js"></script>
   
+
+    <script src="../js/menus.js"></script>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/carrossel.js"></script>
+    <script src="login.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        const adestradores = [
+            { nome: "Carlos", cidade: "Osasco", estado: "SP", imagem: "../imagens/carlos.jpg", estrelas: "★★★★★" },
+            { nome: "Amanda", cidade: "São Paulo", estado: "SP", imagem: "../imagens/amanda.jpg", estrelas: "★★★★★" },
+            { nome: "Rafael", cidade: "Cotia", estado: "SP", imagem: "../imagens/rafael.jpg", estrelas: "★★★★☆" },
+            { nome: "Juliana", cidade: "São Paulo", estado: "SP", imagem: "../imagens/juliana.jpg", estrelas: "★★★★★" },
+            { nome: "Marcelo", cidade: "Barueri", estado: "SP", imagem: "../imagens/marcelo.jpg", estrelas: "★★★★☆" },
+            { nome: "Carla", cidade: "Jandira", estado: "SP", imagem: "../imagens/carla.jpg", estrelas: "★★★★★" },
+            { nome: "Bruno", cidade: "São Paulo", estado: "SP", imagem: "../imagens/bruno.jpg", estrelas: "★★★★★" },
+            { nome: "Fernanda", cidade: "São Paulo", estado: "SP", imagem: "../imagens/fernanda.jpg", estrelas: "★★★★☆" },
+            { nome: "Rodrigo", cidade: "Itapevi", estado: "SP", imagem: "../imagens/rodrigo.jpg", estrelas: "★★★★★" }
+        ];
+    
+        const searchForm = document.getElementById("search-form");
+        const searchCity = document.getElementById("search-city");
+        const searchState = document.getElementById("search-state");
+        const searchError = document.getElementById("search-error");
+        const adestradorContainer = document.querySelector(".carousel-unique-content");
+    
+        searchForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const city = searchCity.value.trim().toLowerCase();
+            const state = searchState.value.trim().toLowerCase();
+    
+            // Filtrar adestradores
+            const resultados = adestradores.filter(adestrador =>
+                adestrador.cidade.toLowerCase() === city && adestrador.estado.toLowerCase() === state
+            );
+    
+            // Limpar resultados anteriores
+            adestradorContainer.innerHTML = "";
+    
+            if (resultados.length > 0) {
+                searchError.style.display = "none";
+                resultados.forEach(adestrador => {
+                    const card = `
+                        <div class="carousel-unique-item">
+                            <div class="card">
+                                <img src="${adestrador.imagem}" alt="${adestrador.nome}">
+                                <h3>${adestrador.nome}</h3>
+                                <p>${adestrador.cidade} - ${adestrador.estado.toUpperCase()}</p>
+                                <div class="stars">${adestrador.estrelas}</div>
+                            </div>
+                        </div>
+                    `;
+                    adestradorContainer.innerHTML += card;
+                });
+            } else {
+                searchError.style.display = "block";
+            }
+        });
+    </script>
+    
+    
 </body>
 
 

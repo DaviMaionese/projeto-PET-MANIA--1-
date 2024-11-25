@@ -1,0 +1,155 @@
+h2 {
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.steps {
+    background-color: #ff9900;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: white;
+    font-size: 1.6em;
+    text-align: center;
+    width: 100%; /* Ocupará toda a largura do container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões - posição e espaçamento */
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens no meio da tela */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin: 20px auto; /* Centraliza o container na página */
+    max-width: 650px; /* Limita a largura do container */
+}
+
+.btn-container button {
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+/* Instruções - alinhamento e estilo */
+.how-to-container {
+    text-align: center;
+    margin: 30px;
+}
+
+.how-to-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.how-to-step {
+    background-color: #ff9900;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    font-size: 18px;
+}
+
+/* Rodapé */
+.new-footer {
+    background-color: #0066cc; /* Fundo azul */
+    color: white; /* Texto branco */
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo */
+    text-align: center;
+}
+
+.new-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.new-footer .footer-content .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.new-footer .footer-content .contact-info p {
+    margin: 5px 0;
+}
+
+.new-footer .footer-content .contact-info .phone,
+.new-footer .footer-content .contact-info .email {
+    font-weight: bold;
+}
+
+.new-footer .social-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  /* Espaçamento entre os ícones */
+}
+
+.new-footer .social-footer .social-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.new-footer .social-footer .social-icon:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone no hover */
+    opacity: 0.8;
+}
+
+/* Estilo dos ícones de redes sociais */
+.new-footer .social-footer .facebook {
+    background-color: #3b5998;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-footer .social-footer .twitter {
+    background-color: #00aced;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-footer .social-footer .linkedin {
+    background-color: #007bb6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-footer .social-footer .instagram {
+    background-color: #e4405f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .new-footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-footer .footer-content .contact-info {
+        margin-bottom: 20px;
+    }
+}
+

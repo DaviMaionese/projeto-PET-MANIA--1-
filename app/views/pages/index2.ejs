@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-<link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta</title>
+  <link rel="stylesheet" href="indes.css">
+
 </head>
 <body>
-<div class="login-container">
-<h2>Login</h2>
-<form id="loginForm">
-<label for="username">Usuário</label>
-<input type="text" id="username" required>
+    <div class="back-button" onclick="goBack()">✕</div>
  
-            <label for="password">Senha</label>
-<input type="password" id="password" required>
+  <div class="account-container">
+    <div class="profile-section">
+      <div class="profile-pic-wrapper">
+        <img id="profile-pic" src="perfil.jpg" alt="Foto de perfil">
+        <input type="file" id="upload-photo" accept="image/*" hidden>
+        <label for="upload-photo" class="upload-label">Alterar Foto</label>
+      </div>
+      <h2 id="user-name">Nome Cliente</h2>
+      <button id="edit-name-btn">Editar Nome</button>
+    </div>
+    <div class="info-section">
+      <h3>Informações da Conta</h3>
+      <form id="info-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="exemplo@dominio.com">
+       
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" placeholder="(00) 00000-0000">
+       
+        <label for="location">Localização:</label>
+        <input type="text" id="location" placeholder="Cidade, Estado">
+       
+        <button type="submit" class="save-btn">Salvar Alterações</button>
+      </form>
+    </div>
+  </div>
  
-            <button type="submit">Entrar</button>
-<p id="errorMessage" class="error-message"></p>
-</form>
-</div>
-<script src="script.js"></script>
+  <script src="perfil.js"></script>
 </body>
 </html>

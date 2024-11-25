@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pet.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/carrossel.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel="stylesheet" href="../css/login.css">
+    
+    <title>Pet Mania - Adestradores</title>
+</head>
+<body>
+    <!-- Ícone do Menu Hambúrguer -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#configuracoes">Configurações</a></li>
+            <li><a href="#minha-conta">Minha Conta</a></li>
+            <li><a href="#historico">Histórico</a></li>
+            <li><a href="#meu-pet">Meu Pet</a></li>
+        </ul>
+    </div>
+
+    <!-- Navbar existente -->
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="index2.ejs">
+                <img src="../imagens/logo1.png" alt="Logo" class="navbar-image">
+                <div class="navbar-logo"></div>
+            </a>
+
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a href="index2.ejs">Login</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/chat">Chat</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/adestradores">Adestradores</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo existente -->
+    <img src="../imagens/pet.png" alt="Alex" class="img-custom-size">
+
+    <section class="carrossel-container">
+        <h2>Adestradores Recomendados</h2>
+        <div class="carrossel-wrapper">
+            <div class="carrossel">
+                <div class="carrossel-item">
+                    <div class="card">
+                        <img src="../imagens/alex.png.jpeg" alt="Alex">
+                        <h3>Alex</h3>
+                        <p>Jd. Paulista - Barueri</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="carrossel-item">
+                    <div class="card">
+                        <img src="../imagens/renata.jpg" alt="Renata">
+                        <h3>Renata</h3>
+                        <p>Av. Paulista - São Paulo</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="carrossel-item">
+                    <div class="card">
+                        <img src="../imagens/adestrador03.jpg" alt="Adriana">
+                        <h3>Adriana</h3>
+                        <p>Jd. Florida - São Roque</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </div>
+    </section><br><br>
+    
+    <div class="new-footer">
+        <div class="footer-content">
+            <!-- Informações de Contato -->
+            <div class="contact-info">
+                <p class="phone">📞 +55 (11) 99999-9999</p>
+                <p class="email">✉️ contato@empresa.com</p>
+            </div>
+
+            <!-- Ícones das Redes Sociais -->
+            <div class="social-footer">
+                <div class="social-icon facebook">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="facebook.png" alt="Facebook">
+                    </a>
+                </div>
+                <div class="social-icon twitter">
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="twitter-icon.png" alt="Twitter">
+                    </a>
+                </div>
+                <div class="social-icon linkedin">
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="social-icon instagram">
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="instagram-icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/menus.js"></script>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/carrossel.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

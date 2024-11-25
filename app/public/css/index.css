@@ -1,0 +1,68 @@
+/* Estilos para o Menu */
+ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  /* Menu Lateral */
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #FF9900;
+    color: white;
+    transition: 0.3s;
+    padding-top: 60px;
+  }
+ 
+  .sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+ 
+  .sidebar a:hover {
+    background-color: #FF9900;
+  }
+ 
+  /* Ícone do Menu Hambúrguer */
+  .menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+  }
+ 
+  .bar {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: #050505;
+    transition: 0.3s;
+  }
+ 
+  /* Quando o menu estiver aberto */
+  .sidebar.open {
+    left: 0;
+  }
+ 
+  /* Estilo do ícone do Menu quando ativo */
+  .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+ 
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }

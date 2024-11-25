@@ -1,0 +1,85 @@
+.box-border {
+  box-sizing: border-box;
+}
+
+.login-body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Garante que ocupe 100% da altura da tela */
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  color: #000000;
+}
+
+.login-caixa {
+  background: #fff;
+  padding: 50px; /* Maior espaçamento interno */
+  border-radius: 25px; /* Borda mais arredondada */
+  width: 100%; /* Garante que ocupe toda a largura disponível */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Certifica que os itens fiquem empilhados */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+}
+
+.login-container h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8rem; /* Título maior */
+}
+
+form label {
+  font-size: 1rem; /* Texto do label maior */
+  margin-top: 15px;
+  display: block;
+  color: #555;
+}
+
+form input {
+  width: 100%;
+  padding: 15px; /* Maior espaço interno no campo */
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Bordas mais arredondadas */
+  margin-bottom: 20px; /* Espaçamento maior entre campos */
+  font-size: 1rem; /* Texto dentro dos campos maior */
+}
+
+.login-btn {
+  background-color: #FF9900;
+  color: #fff;
+  padding: 15px; /* Botão mais alto */
+  border: none;
+  border-radius: 8px; /* Bordas mais arredondadas */
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem; /* Texto maior no botão */
+  font-weight: bold;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 1rem; /* Link maior */
+  color: #007bff;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  color: #FF9900;
+}
