@@ -7,7 +7,7 @@ router.get("/", function (req, res) {
        
 });
 
-router.get("/index2", function (req, res) {
+router.get("/login", function (req, res) {
        res.render('pages/index');
        
 });
